@@ -71,7 +71,7 @@ section {
 }
 
 .btn-primary {
-    background-color: var(--accent-color); /* Using accent for main CTA */
+    background-color: var(--accent-color);
     color: var(--dark-text);
 }
 .btn-primary:hover {
@@ -79,40 +79,47 @@ section {
     transform: translateY(-2px);
 }
 
-/* --- UPDATED WHATSAPP BUTTON STYLE --- */
+/* --- WHATSAPP BUTTON STYLE --- */
 .btn-whatsapp {
     display: inline-flex;
     align-items: center;
-    justify-content: center; /* Center content horizontally */
-    gap: 0.6rem; /* Space between icon and text */
+    justify-content: center;
+    gap: 0.6rem; 
     
-    background-color: var(--whatsapp-green); /* Solid WhatsApp green */
-    color: #fff; /* White text */
+    background-color: var(--whatsapp-green);
+    color: #fff;
     font-family: var(--font-heading);
     font-weight: 600;
-    font-size: 1rem; /* Slightly larger, matches primary button text */
+    font-size: 1rem; 
     text-decoration: none;
     
-    padding: 0.75rem 2rem; /* Adjusted padding to match image */
-    border-radius: 50px; /* Fully rounded */
-    margin-top: 1.2rem; /* Space below the main button, slightly more */
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    margin-top: 1.2rem; 
     
     transition: background-color 0.3s ease, transform 0.3s ease;
-    border: none; /* Ensure no border */
+    border: none;
 }
 
 .btn-whatsapp:hover {
-    background-color: #20b057; /* Slightly darker green on hover */
+    background-color: #20b057;
     transform: translateY(-2px);
 }
 
 .btn-whatsapp i {
-    width: 20px; /* Icon size */
+    width: 20px;
     height: 20px;
-    stroke: #fff; /* Ensure icon is white */
-    stroke-width: 2.5; /* Make icon a bit bolder */
+    stroke: #fff;
+    stroke-width: 2.5;
 }
-/* --- END OF UPDATED STYLE --- */
+
+/* --- LAYOUT FIX FOR GALLERY/MAP --- */
+.split-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
 
 
 /* ----------------------- */
@@ -121,11 +128,10 @@ section {
 
 /* --- 1. Hero --- */
 .hero {
-    /* --- THIS IS THE UPDATED BACKGROUND IMAGE --- */
+    /* Correct background image path */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
                 url('images/hero-image.jpg') 
                 no-repeat center center/cover;
-    /* --- END OF UPDATE --- */
 
     height: 80vh;
     display: flex;
@@ -209,7 +215,6 @@ a[href*="play.google.com"] img {
     height: auto;
     width: 160px;
 }
-/* --- END OF APP BADGE STYLES --- */
 
 
 /* --- 4. Gallery & Map --- */
@@ -265,6 +270,7 @@ a[href*="play.google.com"] img {
 /* ----------------------- */
 
 @media (max-width: 900px) {
+    /* This makes the gallery/map stack on mobile */
     .split-section {
         grid-template-columns: 1fr;
     }
