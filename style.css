@@ -91,12 +91,12 @@ section {
 
 /* --- 1. Hero --- */
 .hero {
-    /* CUSTOMIZE: Replace this placeholder with a real photo in your 'images' folder */
+    /* CUSTOMIZE: Replace this placeholder with your hero image */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('images/hero-image.jpg') 
+                url('https://placehold.co/1446x600/a0a0a0/f0f0f0?text=Your+1446x600+Hero+Image+Here') 
                 no-repeat center center/cover;
     /* Example: url('images/hero-image.jpg') */
-    height: 80vh; /* A bit shorter is fine */
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,16 +160,27 @@ section {
     margin: 0.5rem 0;
 }
 
+/* --- THIS IS THE UPDATED SECTION --- */
 .app-buttons {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem; /* Increased gap slightly */
+    align-items: center; /* Center them */
 }
+
 .app-badge img {
-    height: 40px;
+    height: 40px; /* For the Apple SVG */
     width: auto;
 }
+
+/* Specific fix for the Google Play PNG */
+a[href*="play.google.com"] img {
+    height: auto;
+    width: 160px; /* Set a consistent width for the Google badge */
+}
+/* --- END OF UPDATED SECTION --- */
+
 
 /* --- 4. Gallery & Map --- */
 .gallery-map h3 {
