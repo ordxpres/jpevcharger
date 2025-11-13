@@ -10,6 +10,7 @@
     --bg-gray: #f9f9f9;
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Lato', sans-serif;
+    --whatsapp-green: #25D366; /* Official WhatsApp Green */
 }
 
 * {
@@ -78,12 +79,41 @@ section {
     transform: translateY(-2px);
 }
 
-.split-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: flex-start; /* Align to top */
+/* --- UPDATED WHATSAPP BUTTON STYLE --- */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    gap: 0.6rem; /* Space between icon and text */
+    
+    background-color: var(--whatsapp-green); /* Solid WhatsApp green */
+    color: #fff; /* White text */
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem; /* Slightly larger, matches primary button text */
+    text-decoration: none;
+    
+    padding: 0.75rem 2rem; /* Adjusted padding to match image */
+    border-radius: 50px; /* Fully rounded */
+    margin-top: 1.2rem; /* Space below the main button, slightly more */
+    
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none; /* Ensure no border */
 }
+
+.btn-whatsapp:hover {
+    background-color: #20b057; /* Slightly darker green on hover */
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp i {
+    width: 20px; /* Icon size */
+    height: 20px;
+    stroke: #fff; /* Ensure icon is white */
+    stroke-width: 2.5; /* Make icon a bit bolder */
+}
+/* --- END OF UPDATED STYLE --- */
+
 
 /* ----------------------- */
 /* --- Section Styling --- */
@@ -91,11 +121,12 @@ section {
 
 /* --- 1. Hero --- */
 .hero {
-    /* CUSTOMIZE: Replace this placeholder with your hero image */
+    /* --- THIS IS THE UPDATED BACKGROUND IMAGE --- */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
                 url('images/hero-image.jpg') 
                 no-repeat center center/cover;
-    /* Example: url('images/hero-image.jpg') */
+    /* --- END OF UPDATE --- */
+
     height: 80vh;
     display: flex;
     align-items: center;
@@ -160,26 +191,25 @@ section {
     margin: 0.5rem 0;
 }
 
-/* --- THIS IS THE UPDATED SECTION --- */
+/* --- APP BADGE STYLES --- */
 .app-buttons {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* Increased gap slightly */
-    align-items: center; /* Center them */
+    gap: 1rem;
+    align-items: center;
 }
 
 .app-badge img {
-    height: 40px; /* For the Apple SVG */
+    height: 40px;
     width: auto;
 }
 
-/* Specific fix for the Google Play PNG */
 a[href*="play.google.com"] img {
     height: auto;
-    width: 160px; /* Set a consistent width for the Google badge */
+    width: 160px;
 }
-/* --- END OF UPDATED SECTION --- */
+/* --- END OF APP BADGE STYLES --- */
 
 
 /* --- 4. Gallery & Map --- */
