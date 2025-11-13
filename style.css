@@ -93,7 +93,7 @@ section {
 .hero {
     /* CUSTOMIZE: Replace this placeholder with a real photo in your 'images' folder */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('https://placehold.co/1600x900/a0a0a0/f0f0f0?text=Your+Charger+Spot+Photo') 
+                url('images/hero-image.jpg') 
                 no-repeat center center/cover;
     /* Example: url('images/hero-image.jpg') */
     height: 80vh; /* A bit shorter is fine */
