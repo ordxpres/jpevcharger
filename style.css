@@ -93,7 +93,7 @@ section {
 .hero {
     /* CUSTOMIZE: Replace this placeholder with your hero image */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('https://placehold.co/1446x600/a0a0a0/f0f0f0?text=Your+1446x600+Hero+Image+Here') 
+                url('images/hero-image.jpg') 
                 no-repeat center center/cover;
     /* Example: url('images/hero-image.jpg') */
     height: 80vh;
